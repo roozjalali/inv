@@ -1,4 +1,5 @@
 /* eslint @typescript-eslint/no-var-requires: "off" */
+const path = require('path');
 const { i18n } = require('./next-i18next.config');
 const { withSentryConfig } = require('@sentry/nextjs');
 
@@ -10,7 +11,7 @@ const nextConfig = {
     remotePatterns: [
       {
         protocol: 'https',
-        hostname: 'boxyhq.com',
+        hostname: 'localhost',
       },
       {
         protocol: 'https',
@@ -51,6 +52,11 @@ const nextConfig = {
         ],
       },
     ];
+  },
+  webpack: (config) => {
+    // Define the alias '@' to point to the project root directory
+    config.resolve.alias['@'] = path.resolve(__dirname);
+    return config;
   },
 };
 

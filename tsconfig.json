@@ -6,7 +6,7 @@
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
-    "forceConsistentCasingInFileNames": true,
+    "forceConsistentCasingInFileNames": true,  
     "noEmit": true,
     "esModuleInterop": true,
     "module": "esnext",
@@ -18,10 +18,12 @@
     "baseUrl": ".",
     "noImplicitAny": false,
     "paths": {
-      "@/lib/*": ["lib/*"],
-      "@/components/*": ["components/*"],
+      "@/*": ["./src/*"],              
+      "@/components/*": ["./src/components/*"], 
+      "@/lib/*": ["./src/lib/*"],             
+      "@/styles/*": ["./src/styles/*"]         
     },
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "next-auth.d.ts"],
-  "exclude": ["node_modules"],
+  "exclude": ["node_modules"]
 }
