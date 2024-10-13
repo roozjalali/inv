@@ -16,12 +16,14 @@
     "jsx": "preserve",
     "incremental": true,
     "baseUrl": ".",
+    "checkJs": true,
     "noImplicitAny": false,
     "paths": {
       "@/*": ["./src/*"],              
-      "@/components/*": ["./src/components/*"], 
-      "@/lib/*": ["./src/lib/*"],             
-      "@/styles/*": ["./src/styles/*"]         
+      "@/components/*": ["./components/*"],
+      "@/components/ui/*": ["./components/ui/*"], 
+      "@/lib/*": ["./lib/*"],             
+      "@/styles/*": ["./styles/*"]         
     },
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "next-auth.d.ts"],
